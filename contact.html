@@ -218,143 +218,17 @@ footer{background:#1e3a5f;color:rgba(255,255,255,.65);}
 
     <!-- LEFT: FORM -->
     <div class="contact-left fade">
-
-      <!-- お問い合わせ種別 -->
-      <div class="type-select" id="typeSelect">
-        <button class="type-btn active" data-type="diagnosis" onclick="selectType(this)">
-          <div class="type-btn-icon" style="background:var(--pale);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2272cc" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <div class="type-btn-body">
-            <strong>無料診断を申し込む</strong>
-            <span>60分・完全無料<br>現状整理と施策提案</span>
-          </div>
-        </button>
-        <button class="type-btn" data-type="entry" onclick="selectType(this)">
-          <div class="type-btn-icon" style="background:var(--pale);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2272cc" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
-          </div>
-          <div class="type-btn-body">
-            <strong>¥9,800プランを始める</strong>
-            <span>チャット相談し放題<br>いつでも解約OK</span>
-          </div>
-        </button>
-        <button class="type-btn" data-type="consult" onclick="selectType(this)">
-          <div class="type-btn-icon" style="background:var(--pale);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2272cc" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </div>
-          <div class="type-btn-body">
-            <strong>サービスについて相談</strong>
-            <span>プラン・料金・対応範囲<br>など詳しく聞きたい</span>
-          </div>
-        </button>
-        <button class="type-btn" data-type="other" onclick="selectType(this)">
-          <div class="type-btn-icon" style="background:var(--pale);">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2272cc" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div class="type-btn-body">
-            <strong>その他のお問い合わせ</strong>
-            <span>取材・協業・採用など<br>上記以外のご連絡</span>
-          </div>
-        </button>
-      </div>
-
-      <!-- FORM -->
-      <div id="contactForm">
-        <div class="form-title" id="formTitle">無料診断のお申し込み</div>
-        <form id="mainForm" novalidate>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="company">会社名・屋号<span class="form-required">必須</span></label>
-              <input class="form-input" type="text" id="company" name="company" placeholder="株式会社〇〇">
-              <div class="form-error" id="companyError">会社名を入力してください</div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="industry">業種<span class="form-optional">任意</span></label>
-              <select class="form-select" id="industry" name="industry">
-                <option value="">選択してください</option>
-                <option>士業（税理士・社労士・弁護士など）</option>
-                <option>建設・工務店</option>
-                <option>医療・クリニック</option>
-                <option>製造業</option>
-                <option>小売・EC</option>
-                <option>飲食・サービス業</option>
-                <option>不動産</option>
-                <option>IT・SaaS</option>
-                <option>その他</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="name">お名前<span class="form-required">必須</span></label>
-              <input class="form-input" type="text" id="name" name="name" placeholder="山岡 大晶">
-              <div class="form-error" id="nameError">お名前を入力してください</div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="position">役職<span class="form-optional">任意</span></label>
-              <input class="form-input" type="text" id="position" name="position" placeholder="代表取締役">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="email">メールアドレス<span class="form-required">必須</span></label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="example@company.co.jp">
-              <div class="form-error" id="emailError">正しいメールアドレスを入力してください</div>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="tel">電話番号<span class="form-optional">任意</span></label>
-              <input class="form-input" type="tel" id="tel" name="tel" placeholder="090-0000-0000">
-            </div>
-          </div>
-
-          <!-- 無料診断・¥9,800申し込みのときだけ表示 -->
-          <div class="form-group" id="concernGroup">
-            <label class="form-label" for="concern">現在の課題・気になっていること<span class="form-optional">任意</span></label>
-            <div class="form-check-group" style="margin-bottom:12px;">
-              <label class="form-check"><input type="checkbox" name="concern[]" value="何から始めればいいかわからない"> 何から始めればいいかわからない</label>
-              <label class="form-check"><input type="checkbox" name="concern[]" value="集客・問い合わせを増やしたい"> 集客・問い合わせを増やしたい</label>
-              <label class="form-check"><input type="checkbox" name="concern[]" value="広告の費用対効果を改善したい"> 広告の費用対効果を改善したい</label>
-              <label class="form-check"><input type="checkbox" name="concern[]" value="SEOで検索流入を増やしたい"> SEOで検索流入を増やしたい</label>
-              <label class="form-check"><input type="checkbox" name="concern[]" value="採用がうまくいっていない"> 採用がうまくいっていない</label>
-              <label class="form-check"><input type="checkbox" name="concern[]" value="AIをうまく活用したい"> AIをうまく活用したい</label>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="message">お問い合わせ内容・備考<span class="form-optional">任意</span></label>
-            <textarea class="form-textarea" id="message" name="message" placeholder="ご自由にご記入ください。現在の状況や気になっていることなど、何でもお書きください。"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="howfound">デジタルマートを知ったきっかけ<span class="form-optional">任意</span></label>
-            <select class="form-select" id="howfound" name="howfound">
-              <option value="">選択してください</option>
-              <option>Google検索</option>
-              <option>SNS（Instagram・X・Facebookなど）</option>
-              <option>知人・紹介</option>
-              <option>セミナー・イベント</option>
-              <option>その他</option>
-            </select>
-          </div>
-
-          <div class="form-privacy">
-            送信いただいた情報は、<a href="privacypolicy.html">個人情報保護方針</a>に基づき適切に管理します。お問い合わせへの返信以外の目的には使用しません。
-          </div>
-
-          <button type="submit" class="form-submit" id="submitBtn">送信する</button>
-        </form>
-
-        <!-- SUCCESS MESSAGE -->
-        <div class="form-success" id="formSuccess">
-          <div class="form-success-icon">✅</div>
-          <h3>送信が完了しました</h3>
-          <p>お問い合わせありがとうございます。<br>通常1〜2営業日以内にご連絡いたします。<br><br>無料診断をお申し込みの方は、日程調整のご連絡を差し上げます。<br>しばらくお待ちください。</p>
-        </div>
-      </div>
+      <!-- HubSpot埋め込みフォーム -->
+      <div id="hubspot-contact-form"></div>
+      <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          portalId: "245656776",
+          formId: "3242d1a6-616a-49ea-a4a2-c108bc73e843",
+          region: "na2",
+          target: "#hubspot-contact-form"
+        });
+      </script>
     </div>
 
     <!-- RIGHT: INFO -->
@@ -482,73 +356,6 @@ if(hamburger&&mobileMenu){
     }
   });
 }
-
-// 種別切り替え
-const titles = {
-  diagnosis: '無料診断のお申し込み',
-  entry: '¥9,800プランのお申し込み',
-  consult: 'サービスについてのご相談',
-  other: 'その他のお問い合わせ'
-};
-function selectType(btn) {
-  document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  const type = btn.dataset.type;
-  document.getElementById('formTitle').textContent = titles[type];
-  const concernGroup = document.getElementById('concernGroup');
-  concernGroup.style.display = (type === 'diagnosis' || type === 'entry') ? 'block' : 'none';
-}
-
-// バリデーション
-function validate() {
-  let ok = true;
-  const company = document.getElementById('company');
-  const companyErr = document.getElementById('companyError');
-  if (!company.value.trim()) {
-    company.classList.add('error');
-    companyErr.classList.add('show');
-    ok = false;
-  } else {
-    company.classList.remove('error');
-    companyErr.classList.remove('show');
-  }
-  const name = document.getElementById('name');
-  const nameErr = document.getElementById('nameError');
-  if (!name.value.trim()) {
-    name.classList.add('error');
-    nameErr.classList.add('show');
-    ok = false;
-  } else {
-    name.classList.remove('error');
-    nameErr.classList.remove('show');
-  }
-  const email = document.getElementById('email');
-  const emailErr = document.getElementById('emailError');
-  const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailReg.test(email.value)) {
-    email.classList.add('error');
-    emailErr.classList.add('show');
-    ok = false;
-  } else {
-    email.classList.remove('error');
-    emailErr.classList.remove('show');
-  }
-  return ok;
-}
-
-// フォーム送信（HubSpot等の埋め込みコードに差し替えてください）
-document.getElementById('mainForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  if (!validate()) return;
-  const btn = document.getElementById('submitBtn');
-  btn.disabled = true;
-  btn.textContent = '送信中...';
-  // ↓ HubSpotや他のフォームサービスの送信処理をここに追加
-  setTimeout(() => {
-    document.getElementById('mainForm').style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
-  }, 800);
-});
 
 // スクロールフェード
 (function(){
