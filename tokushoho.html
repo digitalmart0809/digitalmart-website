@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定商取引法に基づく表記｜デジタルマート株式会社</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0a2e5c;--blue:#1558a8;--blue-mid:#2272cc;--pale:#f0f6fc;--pale2:#f7fafd;--text:#1a1a2e;--text-mid:#4a4a6a;--text-light:#8888aa;--border:#d0e4f5;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:#fff;line-height:1.8;font-size:16px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.logo a{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-mark{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;}
+.logo-mark svg{width:20px;height:20px;fill:white;}
+.logo-text{font-family:'Sora',sans-serif;font-weight:700;font-size:18px;color:var(--navy);}
+.nav-links{display:flex;gap:4px;}
+.nav-link{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none;padding:8px 14px;border-radius:6px;transition:all .15s;}
+.nav-link:hover{color:var(--blue);background:var(--pale);}
+.nav-right{display:flex;align-items:center;gap:12px;}
+.nav-link-contact{font-size:14px;font-weight:500;color:var(--text-mid);text-decoration:none;padding:8px 14px;border-radius:6px;}
+.nav-link-contact:hover{color:var(--blue);background:var(--pale);}
+.nav-btn{background:var(--blue);color:#fff;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;}
+.nav-btn:hover{background:var(--navy);}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:16px 24px 24px;z-index:199;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,.1);}
+.mobile-menu a{font-size:16px;font-weight:500;color:var(--text);text-decoration:none;padding:12px 16px;border-radius:8px;}
+.mobile-menu a:hover{background:var(--pale);}
+.mobile-menu-cta{background:var(--blue)!important;color:#fff!important;text-align:center;font-weight:700!important;margin-top:8px;}
+.mobile-menu.open{display:flex;}
+
+.page-hero{background:var(--pale2);padding:112px 48px 48px;border-bottom:1px solid var(--border);}
+.page-hero-label{font-size:11px;letter-spacing:.2em;color:var(--text-light);text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+.page-hero h1{font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--navy);margin-bottom:8px;}
+.page-hero p{font-size:14px;color:var(--text-light);}
+
+.breadcrumb{background:var(--pale2);padding:12px 48px;border-bottom:1px solid var(--border);}
+.breadcrumb-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-light);}
+.breadcrumb-inner a{color:var(--blue-mid);text-decoration:none;}
+
+.doc-body{max-width:860px;margin:0 auto;padding:64px 48px 96px;}
+.doc-note{font-size:14px;color:var(--text-light);margin-bottom:40px;padding:16px 20px;background:var(--pale2);border-radius:8px;border-left:3px solid var(--border);}
+.doc-table{width:100%;border-collapse:collapse;margin-bottom:48px;}
+.doc-table tr{border-bottom:1px solid var(--border);}
+.doc-table tr:first-child{border-top:1px solid var(--border);}
+.doc-table th{width:200px;padding:18px 20px;text-align:left;font-size:14px;font-weight:700;color:var(--navy);background:var(--pale2);vertical-align:top;white-space:nowrap;}
+.doc-table td{padding:18px 20px;font-size:14px;color:var(--text-mid);line-height:1.85;vertical-align:top;}
+.doc-table td a{color:var(--blue-mid);}
+.doc-section{margin-bottom:36px;}
+.doc-section h2{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.doc-section p{font-size:14px;color:var(--text-mid);line-height:1.9;margin-bottom:10px;}
+.doc-section ul{padding-left:20px;margin-bottom:10px;}
+.doc-section li{font-size:14px;color:var(--text-mid);line-height:1.85;margin-bottom:4px;}
+.highlight{background:#fff8f0;border:1px solid #ffd8aa;border-radius:8px;padding:16px 20px;margin-bottom:32px;font-size:14px;color:var(--text-mid);line-height:1.9;}
+.highlight strong{color:var(--navy);}
+
+footer{background:#1e3a5f;color:rgba(255,255,255,.65);}
+.footer-bottom-only{max-width:1100px;margin:0 auto;padding:24px 48px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+.footer-bottom-only p{font-size:12px;color:rgba(255,255,255,.4);}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;}
+.footer-links a:hover{color:rgba(255,255,255,.8);}
+
+@media(max-width:900px){
+  nav{padding:0 20px;}
+  .nav-links,.nav-link-contact{display:none;}
+  .nav-hamburger{display:flex;}
+  .page-hero,.breadcrumb,.doc-body{padding-left:24px;padding-right:24px;}
+  .page-hero{padding-top:96px;}
+  .doc-table th{width:120px;padding:14px 12px;font-size:13px;}
+  .doc-table td{padding:14px 12px;font-size:13px;}
+  .footer-bottom-only{padding:24px;flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><a href="index.html"><div style="display:flex;align-items:center;gap:10px;"><div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm13 2a3 3 0 110 6 3 3 0 010-6z"/></svg></div><span class="logo-text">DIGITAL MART</span></div></a></div>
+  <div class="nav-links">
+    <a href="service.html" class="nav-link">サービス</a>
+    <a href="cases.html" class="nav-link">実績</a>
+    <a href="company.html" class="nav-link">会社概要</a>
+    <a href="blog.html" class="nav-link">ブログ</a>
+  </div>
+  <div class="nav-right">
+    <a href="contact.html" class="nav-link-contact">お問い合わせ</a>
+    <a href="contact.html" class="nav-btn">無料診断を申し込む</a>
+    <button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="service.html">サービス</a><a href="cases.html">実績</a><a href="company.html">会社概要</a><a href="blog.html">ブログ</a><a href="contact.html">お問い合わせ</a>
+  <a href="contact.html" class="mobile-menu-cta">無料診断を申し込む</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Specified Commercial Transactions Act</div>
+  <h1>特定商取引法に基づく表記</h1>
+  <p>特定商取引法第11条に基づく表示</p>
+</div>
+<div class="breadcrumb"><div class="breadcrumb-inner"><a href="index.html">ホーム</a><span style="color:var(--border);">›</span><span>特定商取引法に基づく表記</span></div></div>
+
+<div class="doc-body">
+  <div class="doc-note">
+    特定商取引法に基づき、以下の事項を表示します。
+  </div>
+
+  <table class="doc-table">
+    <tr>
+      <th>販売事業者名</th>
+      <td>デジタルマート株式会社</td>
+    </tr>
+    <tr>
+      <th>代表者</th>
+      <td>山岡 大晶（やまおか ひろあき）</td>
+    </tr>
+    <tr>
+      <th>所在地</th>
+      <td>
+        ※請求があった場合は遅滞なく開示します。<br>
+        <span style="font-size:13px;color:var(--text-light);">（特定商取引法施行規則第8条第1項に基づく対応）</span>
+      </td>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <td>
+        ※請求があった場合は遅滞なく開示します。<br>
+        <span style="font-size:13px;color:var(--text-light);">メールでのお問い合わせを優先しております。</span>
+      </td>
+    </tr>
+    <tr>
+      <th>メールアドレス</th>
+      <td><a href="mailto:yamaokahiroaki@digitalmart.co.jp">yamaokahiroaki@digitalmart.co.jp</a></td>
+    </tr>
+    <tr>
+      <th>サービスの対価</th>
+      <td>
+        各サービスページに記載の料金をご参照ください。<br>
+        ・ENTRYプラン：¥9,800 / 月（税別）<br>
+        ・LITEプラン：¥100,000 / 月（税別）<br>
+        ・STANDARDプラン：¥200,000 / 月（税別）<br>
+        ・FULLプラン：¥300,000 / 月（税別）<br>
+        ・スポット対応：¥55,000〜¥80,000（税別）<br>
+        ※別途消費税がかかります。
+      </td>
+    </tr>
+    <tr>
+      <th>支払方法</th>
+      <td>銀行振込（請求書払い）<br>※お支払い方法の詳細はご契約時にご案内します。</td>
+    </tr>
+    <tr>
+      <th>支払時期</th>
+      <td>
+        月額サービス：毎月末日締め・翌月末日払い<br>
+        スポット対応：サービス提供後に請求書を発行し、請求日より30日以内
+      </td>
+    </tr>
+    <tr>
+      <th>サービス提供時期</th>
+      <td>
+        月額サービス：ご契約成立後、翌月1日よりサービス開始（個別に調整可）<br>
+        スポット対応：ご発注後、双方合意のスケジュールに従い提供
+      </td>
+    </tr>
+    <tr>
+      <th>契約期間</th>
+      <td>
+        月額サービス：最低契約期間の定めなし（月単位での契約）<br>
+        解約は1ヶ月前のご連絡をもって受け付けます。
+      </td>
+    </tr>
+    <tr>
+      <th>返品・キャンセルについて</th>
+      <td>
+        <strong>月額サービス</strong><br>
+        解約希望月の前月末日までにメールにてご連絡ください。当月分のご請求は発生します。<br><br>
+        <strong>スポット対応</strong><br>
+        サービス開始前のキャンセルは無料です。作業着手後のキャンセルについては、作業進捗に応じた費用が発生する場合があります。詳細はご契約時にご確認ください。<br><br>
+        <strong>無料診断・無料相談</strong><br>
+        無料サービスのため、キャンセルに伴う費用は一切発生しません。
+      </td>
+    </tr>
+    <tr>
+      <th>動作環境</th>
+      <td>
+        オンラインMTGはZoom・Google Meetに対応しています。<br>
+        チャット相談はLINEまたはChatworkを使用します。<br>
+        ※ご利用に必要なアプリは無料でご利用いただけます。
+      </td>
+    </tr>
+    <tr>
+      <th>特記事項</th>
+      <td>
+        当社のサービスはデジタルマーケティングに関するコンサルティング・支援サービスです。<br>
+        成果（売上・集客数等）を保証するものではありません。<br>
+        ご不明点はお気軽に<a href="contact.html">お問い合わせ</a>ください。
+      </td>
+    </tr>
+  </table>
+
+  <div class="doc-section">
+    <h2>クーリングオフについて</h2>
+    <p>当社のサービスはBtoB（法人向け）のコンサルティングサービスであり、特定商取引法に定めるクーリングオフの対象外となります。ただし、お客様のご事情によるキャンセルについては誠実に対応いたしますので、お気軽にご相談ください。</p>
+  </div>
+
+  <div class="doc-section">
+    <h2>お問い合わせ先</h2>
+    <p>本表記に関するお問い合わせは下記までご連絡ください。</p>
+    <div class="highlight">
+      <strong>デジタルマート株式会社</strong><br>
+      担当：山岡 大晶<br>
+      Email：<a href="mailto:yamaokahiroaki@digitalmart.co.jp" style="color:var(--blue-mid);">yamaokahiroaki@digitalmart.co.jp</a><br>
+      受付時間：平日 10:00〜18:00（土日祝を除く）
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom-only">
+    <p>© 2025 デジタルマート株式会社 All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="privacypolicy.html">プライバシーポリシー</a>
+      <a href="tokushoho.html">特定商取引法</a>
+      <a href="contact.html">お問い合わせ</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const h=document.getElementById('navHamburger'),m=document.getElementById('mobileMenu');
+if(h&&m){h.addEventListener('click',()=>{m.classList.toggle('open');const s=h.querySelectorAll('span');if(m.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}else{s.forEach(x=>{x.style.transform='';x.style.opacity='';})}});document.addEventListener('click',e=>{if(!h.contains(e.target)&&!m.contains(e.target)){m.classList.remove('open');h.querySelectorAll('span').forEach(x=>{x.style.transform='';x.style.opacity='';})}});}
+</script>
+</body>
+</html>
