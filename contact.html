@@ -100,6 +100,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .form-success h3{font-size:22px;font-weight:700;color:var(--navy);margin-bottom:12px;}
 .form-success p{font-size:15px;color:var(--text-mid);line-height:1.9;}
 
+/* HubSpot iframe wrapper (フォーム内部は上書き不可のため外側のみ整える) */
+.hubspot-wrap{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:24px;
+  box-shadow:var(--shadow-sm);
+}
+.hubspot-wrap #hubspot-contact-form iframe{
+  width:100% !important;
+  border:0 !important;
+  display:block;
+}
+
 /* RIGHT: INFO */
 .contact-right{display:flex;flex-direction:column;gap:20px;}
 .contact-card{background:#fff;border-radius:14px;padding:28px;border:1px solid var(--border);box-shadow:var(--shadow-sm);}
@@ -219,7 +233,9 @@ footer{background:#1e3a5f;color:rgba(255,255,255,.65);}
     <!-- LEFT: FORM -->
     <div class="contact-left fade">
       <!-- HubSpot埋め込みフォーム -->
-      <div id="hubspot-contact-form"></div>
+      <div class="hubspot-wrap">
+        <div id="hubspot-contact-form"></div>
+      </div>
       <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
       <script>
         hbspt.forms.create({
